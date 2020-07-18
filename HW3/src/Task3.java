@@ -1,6 +1,6 @@
 public class Task3 {
     public static void main(String[] args) {
-        int num0 = 0;
+        int num0 = 1;
         int num1 = 1;
         int num2;
         System.out.print(num0 + " " + num1 + " ");
