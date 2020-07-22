@@ -10,6 +10,7 @@ public class Task3 {
             num0 = num1;
             num1 = num2;
         }
+
     }
 }
 

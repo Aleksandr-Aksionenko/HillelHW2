@@ -34,9 +34,9 @@ public class Task1 {
 
         }
         if (isInput == true) {
-            System.out.println("Есть последовательность ");
+            System.out.println("there is a sequence ");
         } else {
-            System.out.println("Последовательности нет ");
+            System.out.println("no sequence ");
         }
     }
 }

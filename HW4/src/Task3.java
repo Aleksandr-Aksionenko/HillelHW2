@@ -1,48 +1,37 @@
 public class Task3 {
     public static void main(String[] args) {
-        int[] num = {1255, 231, 22, 845};
 
-        int[] arrayLength = new int[num.length];
+        int[] arrayNumbers = {12, 44, 36, 148, 657, 747, 743};
 
-        for (int i = 0; i < num.length; i++) {
-            int tmp = 0;
-            int number = num[i];
-            while (number != 0) {
-                number /= 10;
-                tmp++;
-                arrayLength[i] = tmp;
-            }
-        }
-
-        for (int u = 0; u < arrayLength.length; u++) {
-            int[] arrayNum = new int[arrayLength[u]];
-            int tmpNum = num[u];
-            int tmpIndex = 0;
-            while (tmpNum != 0) {
-
-                arrayNum[tmpIndex] = tmpNum % 10;
-                tmpNum = tmpNum / 10;
-                tmpIndex++;
-            }
-            for (int q = 1; q < arrayNum.length; q++) {
-                int counterRep = 0;
-                for (int w = 0; w < arrayNum.length; w++) {
-                    if (arrayNum[q] == arrayNum[w]) {
-                        counterRep = counterRep + 1;
-
-                    }
-                    if (counterRep == 1) {
-                        System.out.println(num[q]);
-
-                    }
-
-                }
-
+        for (Integer number : arrayNumbers) {
+            if (hasDifferentDigits(number)) {
+                System.out.println(number);
             }
         }
     }
-}
 
+    private static boolean hasDifferentDigits(int number) {
+        while (number > 0) {
+            int digit = number % 10;
+            number = number / 10;
+            if (numberHasSuchDigit(number, digit)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean numberHasSuchDigit(int number, int comparingDigit) {
+        while (number > 0) {
+            int digit = number % 10;
+            number = number / 10;
+            if (digit == comparingDigit) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
 
 
 

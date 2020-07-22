@@ -25,9 +25,9 @@ public class Task2 {
         }
         for (int i = 0; i < array.length; i++) {
             if (tmpMax == array2[i])
-                System.out.println("Самое длинное: " + array[i] + ". Длина = " + tmpMax);
+                System.out.println("long: " + array[i] + ". length = " + tmpMax);
             if (tmpMin == array2[i])
-                System.out.println("Самое короткое: " + array[i] + ". Длина = " + tmpMin);
+                System.out.println("short: " + array[i] + ". length = " + tmpMin);
         }
     }
 }
