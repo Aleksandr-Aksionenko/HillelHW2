@@ -1,7 +1,6 @@
 public class CarProcessor {
 
     public void checkBrand(Car[] cars, String brand) {
-
         for (Car car : cars) {
             if (car.brand.equals(brand)) {
                 showInfo(car);
