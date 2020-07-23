@@ -17,9 +17,9 @@ public class CarProcessor {
         }
     }
 
-    public void checkPrice(Car[] cars, Integer year, int price) {
+    public void checkPrice(Car[] cars, int year, int price) {
         for (Car car : cars) {
-            if (car.year.equals(year) & price < car.price)
+            if (car.year == year & price < car.price)
                 showInfo(car);
         }
     }

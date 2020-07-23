@@ -3,7 +3,7 @@ public class Car {
     int id;
     String brand;
     String model;
-    Integer year;
+    int year;
     String colour;
     int price;
     String registrationNumber;
