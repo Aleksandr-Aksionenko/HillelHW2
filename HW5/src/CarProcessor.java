@@ -29,7 +29,6 @@ public class CarProcessor {
         System.out.println("id:" + cars.id + " " + cars.brand + " " + cars.model + " " +
                 cars.year + "  " + cars.colour + " " + cars.price + "$ " +
                 cars.registrationNumber);
-
     }
 }
 
