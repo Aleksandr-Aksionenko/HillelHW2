@@ -9,8 +9,8 @@ public class Runner {
 
         CarProcessor proc = new CarProcessor();
 
-        proc.checkBrand(cars, "BMV");
-        proc.checkUseYears(cars, "BMV", 9);
+        proc.checkBrand(cars, "BMW");
+        proc.checkUseYears(cars, "BMW", 9);
         proc.checkPrice(cars, 2019, 40000);
     }
 }
