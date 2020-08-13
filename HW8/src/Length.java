@@ -1,16 +1,14 @@
 public class Length {
-    Triangle triangle;
-
     public double lengthAB() {
-        return Formulas.formulasLength(triangle.getPoint1(), triangle.getPoint2());
+        return Formulas.formulasLength(getPoint1(), getPoint2());
     }
 
     public double lengthBC() {
-        return Formulas.formulasLength(triangle.getPoint2(), triangle.getPoint3());
+        return Formulas.formulasLength(getPoint2(), getPoint3());
     }
 
     public double lengthCA() {
-        return Formulas.formulasLength(triangle.getPoint3(), triangle.getPoint1());
+        return Formulas.formulasLength(getPoint3(), getPoint1());
     }
 
     double perimeter() {

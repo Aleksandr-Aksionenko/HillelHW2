@@ -1,3 +1,3 @@
-public  interface TriangleType  {
-     boolean triangleType(Triangle triangle);
+public interface TriangleType {
+    boolean triangleType(Triangle triangle);
 }

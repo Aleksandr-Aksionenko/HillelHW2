@@ -4,11 +4,13 @@ public class Triangle {
     private Point point3;
     private String type;
     Length length;
+
     public Triangle(Point point1, Point point2, Point point3) {
         this.point1 = point1;
         this.point2 = point2;
         this.point3 = point3;
     }
+
 
     public double semiPerimeter() {
         return length.perimeter() / 2;
