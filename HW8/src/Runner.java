@@ -10,13 +10,10 @@ public class Runner {
 
         Triangle[] triangles = new Triangle[]{triangle1, triangle2, triangle3, triangle4, triangle5};
 
-        Processor processor = new Processor();
-        processor.setTriangleTypes(triangles);
 
-        for (Triangle triangle : triangles) {
-            System.out.println(triangle);
-        }
+        Processor processor = new Processor(triangles);
 
+        System.out.println(processor.countArbitrary());
     }
 
 }

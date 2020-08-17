@@ -1,50 +1,125 @@
 public class Processor {
+    private Triangle[] triangles;
 
-    public void setTriangleTypes(Triangle[] triangles) {
-
-        TriangleType equilateralTriangleTypeProcessor = new EquilateralTriangle();
-        TriangleType isoscelesTriangleTypeProcessor = new IsoscelesTriangle();
-        TriangleType rectangularTriangleTypeProcessor = new RightTriangle();
-
-        for (Triangle triangle : triangles) {
-            if (equilateralTriangleTypeProcessor.triangleType(triangle)) {
-                triangle.setType("Equilateral");
-            } else if (isoscelesTriangleTypeProcessor.triangleType(triangle)) {
-                triangle.setType("Isosceles");
-            } else if (rectangularTriangleTypeProcessor.triangleType(triangle)) {
-                triangle.setType("Right");
-            }
-        }
+    public Processor(Triangle[] triangles) {
+        this.triangles = triangles;
     }
 
-    public Triangle countMinTriangle(Triangle[] triangles) {
-        Triangle maxTriangle = countMaxTriangle(triangles);
-        double minSquare = maxTriangle.area();
-        double minPerimeter = maxTriangle.semiPerimeter();
-        Triangle result = null;
+    public int countEquilateral() {
+        return sortTriangles(new TriangleCheck() {
+            @Override
+            public boolean check(Triangle triangle) {
+                return triangle.isEquilateralTriangle();
+            }
+        });
+    }
 
+    public int countIsoscelesTriangle() {
+        return sortTriangles(new TriangleCheck() {
+            @Override
+            public boolean check(Triangle triangle) {
+                return triangle.isIsoscelesTriangle();
+            }
+        });
+    }
+
+    public int countRightTriangle() {
+        return sortTriangles(new TriangleCheck() {
+            @Override
+            public boolean check(Triangle triangle) {
+                return triangle.isRightTriangle();
+            }
+        });
+    }
+
+    public int countArbitrary() {
+        return sortTriangles(new TriangleCheck() {
+            @Override
+            public boolean check(Triangle triangle) {
+                return triangle.isArbitrary();
+            }
+        });
+    }
+
+    public Triangle findBiggestIsoscelesByArea() {
+        return getTriangleByParametersBiggest(
+                new TriangleProperty() {
+                    @Override
+                    public double property(Triangle triangle) {
+                        return triangle.area();
+                    }
+                },
+                new TriangleCheck() {
+                    @Override
+                    public boolean check(Triangle triangle) {
+                        return triangle.isIsoscelesTriangle();
+                    }
+                });
+    }
+
+    public Triangle findBiggestIsoscelesByAreaPerimeter() {
+        return getTriangleByParametersBiggest(new TriangleProperty() {
+                                                  @Override
+                                                  public double property(Triangle triangle) {
+                                                      return triangle.perimeter();
+                                                  }
+                                              },
+                new TriangleCheck() {
+                    @Override
+                    public boolean check(Triangle triangle) {
+                        return triangle.isIsoscelesTriangle();
+                    }
+                });
+    }
+
+    public Triangle findLeastIsoscelesByAreaPerimeter() {
+        return getTriangleByParametersLeast(new TriangleProperty() {
+                                                @Override
+                                                public double property(Triangle triangle) {
+                                                    return triangle.perimeter();
+                                                }
+                                            },
+                new TriangleCheck() {
+                    @Override
+                    public boolean check(Triangle triangle) {
+                        return triangle.isIsoscelesTriangle();
+                    }
+                });
+    }
+
+
+// ETS
+
+
+    private Triangle getTriangleByParametersBiggest(TriangleProperty property, TriangleCheck check) {
+        Triangle result = triangles[0];
         for (Triangle triangle : triangles) {
-            if (triangle.area() <= minSquare && triangle.semiPerimeter() <= minPerimeter) {
-                minSquare = triangle.area();
-                minPerimeter = triangle.semiPerimeter();
+            if ((property.property(result) > property.property(triangle)) && check.check(triangle)) {
                 result = triangle;
             }
         }
         return result;
     }
 
-    public Triangle countMaxTriangle(Triangle[] triangles) {
-        double maxSquare = 0;
-        double maxPerimeter = 0;
-        Triangle result = null;
+    private Triangle getTriangleByParametersLeast(TriangleProperty property, TriangleCheck check) {
+        Triangle result = triangles[0];
         for (Triangle triangle : triangles) {
-            if (triangle.area() >= maxSquare && triangle.semiPerimeter() >= maxPerimeter) {
-                maxSquare = triangle.area();
-                maxPerimeter = triangle.semiPerimeter();
+            if ((property.property(result) < property.property(triangle)) && check.check(triangle)) {
                 result = triangle;
             }
         }
         return result;
     }
+
+    private int sortTriangles(TriangleCheck function) {
+        int count = 0;
+        for (Triangle triangle : triangles) {
+            if (function.check(triangle)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
 
