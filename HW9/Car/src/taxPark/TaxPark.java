@@ -2,6 +2,7 @@ package taxPark;
 
 import model.Cars;
 
+
 public interface TaxPark {
 
         Cars[] speed(int minSpeed, int maxSpeed);

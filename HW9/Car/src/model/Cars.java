@@ -1,6 +1,6 @@
 package model;
 
-public abstract class  Cars {
+public abstract class Cars {
 
     private String brand;
     private int speed;
