@@ -20,30 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8b08f10-5b27-4ba2-9851-d4f050de73b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../HW/HW9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW/src/.idea/src.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW/src/HW9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/HW9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Car/Car.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/Triangle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/src/formulas/Formulas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/src/point/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/src/processor/Processor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/src/run/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/src/triangle/Triangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/src/triangle/TriangleCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Triangle/src/triangle/TriangleProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cars.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/model/Cars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PassengerCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/model/PassengerCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/TruckCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/model/TruckCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/run/Run.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/taxPark/CarProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/taxPark/CarProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/taxPark/TaxPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/taxPark/TaxPark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/HW10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/src/flowers/Accessory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/src/flowers/Bouquet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/src/flowers/Flowers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/src/flowersWorker/FlowersShop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/src/inputOutput/ConsoleFlowers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW10/src/utils/ArrayUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW/HW9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW/src/.idea/src.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW/src/HW9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/src/taxPark/CarProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/taxPark/CarProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Triangle/src/processor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -144,6 +138,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="68" key="#Auto_Import" timestamp="1597662710459">

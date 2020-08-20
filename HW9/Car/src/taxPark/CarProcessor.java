@@ -1,7 +1,7 @@
-package HillelHW2.HW9.taxPark;
+package taxPark;
 
 import model.Cars;
-import taxPark.TaxPark;
+
 
 public abstract class CarProcessor implements TaxPark {
 
