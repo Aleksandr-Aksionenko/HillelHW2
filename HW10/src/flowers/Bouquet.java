@@ -8,14 +8,14 @@ import java.util.Arrays;
 public class Bouquet {
     private Flowers[] flowers;
     private Accessory[] accessories;
+
     public Bouquet() {
     }
+
     public Bouquet(Flowers[] flowers, Accessory[] accessories) {
         this.flowers = flowers;
         this.accessories = accessories;
     }
-
-
 
     public void addFlower(Flowers flower) {
         flowers = ArrayUtils.extendArray(flowers, flower);
@@ -40,18 +40,6 @@ public class Bouquet {
         return flowers;
     }
 
-    public void setFlowers(Flowers[] flowers) {
-        this.flowers = flowers;
-    }
-
-    public Accessory[] getAccessories() {
-        return accessories;
-    }
-
-    public void setAccessories(Accessory[] accessories) {
-        this.accessories = accessories;
-    }
-
     @Override
     public String toString() {
         return "Bouquet{" +
@@ -60,6 +48,4 @@ public class Bouquet {
                 "Price=" + price() +
                 '}';
     }
-
-
 }

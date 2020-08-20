@@ -24,22 +24,10 @@ public class FlowersShop {
         return bouquet;
     }
 
-    public Bouquet[] addBouquets(Bouquet bouquet) {
+    public Bouquet[] createBouquet(Bouquet bouquet) {
         return bouquets = ArrayUtils.extendArray(bouquets, bouquet);
     }
 
-    public Accessory[] createAccessories(Accessory accessory) {
-        return accessories = ArrayUtils.extendArray(accessories, accessory);
-    }
-
-
-    public Flowers[] createFlowers(Flowers flower) {
-        return flowers =  ArrayUtils.extendArray(flowers, flower);
-    }
-
-    public Bouquet[] createBouquet(Bouquet bouquet) {
-        return bouquets =  ArrayUtils.extendArray(bouquets, bouquet);
-    }
     public void filterByStemLength(int min, int max) {
         for (Bouquet bouquet : bouquets) {
             for (Flowers flower : bouquet.getFlowers())
@@ -48,6 +36,7 @@ public class FlowersShop {
                 }
         }
     }
+
     public void sortAge() {
         Flowers tmp;
         for (Bouquet bouquet : bouquets) {
@@ -63,13 +52,5 @@ public class FlowersShop {
             System.out.println(Arrays.toString(bouquet.getFlowers()));
         }
     }
-    public void createBouquet() {
-        Bouquet bouquet = new Bouquet();
-    }
-
-    public Bouquet[] getBouquets() {
-        return bouquets;
-    }
-
 
 }

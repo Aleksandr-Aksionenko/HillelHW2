@@ -7,7 +7,6 @@ import flowers.Flowers;
 public class ArrayUtils {
 
     public static Flowers[] extendArray(Flowers[] init, Flowers added) {
-
         Flowers[] extend = new Flowers[init.length + 1];
         for (int i = 0; i < init.length; i++) {
             extend[i] = init[i];
@@ -28,7 +27,6 @@ public class ArrayUtils {
     }
 
     public static Accessory[] extendArray(Accessory[] init, Accessory added) {
-
         Accessory[] extend = new Accessory[init.length + 1];
         for (int i = 0; i < init.length; i++) {
             extend[i] = init[i];
