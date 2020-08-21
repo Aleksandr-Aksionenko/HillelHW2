@@ -18,14 +18,14 @@ public class ConsoleFlowers {
         scanner = new Scanner(System.in);
     }
 
-    public static void main(String[] args) throws ExceptionNumbers {
+    public static void main(String[] args) {
         FlowersShop shop = new FlowersShop();
         ConsoleFlowers flowersWorker = new ConsoleFlowers(shop);
         flowersWorker.start();
         flowersWorker.stop();
     }
 
-    public void start() throws ExceptionNumbers {
+    public void start() {
         int chose = 0;
         do {
             System.out.println("Select item");
@@ -62,7 +62,6 @@ public class ConsoleFlowers {
     }
 
     private static Flowers createFlower() {
-
         Scanner s = new Scanner(System.in);
         System.out.println("Enter name");
         String name = s.nextLine();
@@ -73,8 +72,10 @@ public class ConsoleFlowers {
         System.out.println("Enter prise");
         int priseFlowers = s.nextInt();
 
-        return new Flowers(name, lengthStem, age, priseFlowers);
+        return   new Flowers(name, lengthStem, age, priseFlowers);
     }
+
+
 
     private void createBouquet() {
         Scanner s = new Scanner(System.in);
@@ -96,9 +97,7 @@ public class ConsoleFlowers {
         }
     }
 
-    private void operateBouquets() throws ExceptionNumbers {
-        int min;
-        int max;
+    private void operateBouquets() {
         Scanner s = new Scanner(System.in);
         System.out.println("1. Sort flowers by age");
         System.out.println("2. Find flowers by stem length");
@@ -112,19 +111,27 @@ public class ConsoleFlowers {
                 flowersShop.sortAge();
                 break;
             case 2:
+
                 System.out.println("Enter min. length:");
-                min = inputCheckLength(scanner.nextInt());
-                System.out.println("Enter max. length:");
-                max = inputCheckLength(scanner.nextInt());
-                flowersShop.filterByStemLength(min, max);
+                try {
+                    int min = scanner.nextInt();
+
+                    System.out.println("Enter max. length:");
+                    int max = scanner.nextInt();
+
+                    flowersShop.filterByStemLength(min, max);
+                } catch (ExceptionNumbers exceptionNumbers) {
+                    exceptionNumbers.printStackTrace();
+                }
                 break;
+
             case 4:
                 System.out.println("Flower name: ");
                 String name = scanner.nextLine();
                 System.out.println("Length of stem:");
-                int lengthStem = inputCheckLength(scanner.nextInt());
+                int lengthStem = scanner.nextInt();
                 System.out.println("age");
-                int age = inputCheckAge(scanner.nextInt());
+                int age = scanner.nextInt();
                 System.out.println("Price:");
                 int price = scanner.nextInt();
                 flowersShop.AddFlowerToBouquet(new Flowers(name, lengthStem, age, price));
@@ -142,21 +149,6 @@ public class ConsoleFlowers {
         }
     }
 
-    private int inputCheckLength(int number) throws ExceptionNumbers {
-        if (number < 0) {
-            throw new ExceptionNumbers("negative number input ");
-        } else if (number == 0) {
-            throw new ExceptionNumbers("Length cannot be zero");
-        }
-        return number;
-    }
-
-    private int inputCheckAge(int number) throws ExceptionNumbers {
-        if (number < 0) {
-            throw new ExceptionNumbers("negative number input ");
-        }
-        return number;
-    }
 
     public void stop() {
         scanner.close();
