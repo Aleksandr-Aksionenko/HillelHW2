@@ -62,7 +62,6 @@ public class ConsoleFlowers {
     }
 
     private static Flowers createFlower() {
-Flowers flowers = new Flowers();
         Scanner s = new Scanner(System.in);
         System.out.println("Enter name");
         String name = s.nextLine();
@@ -75,8 +74,6 @@ Flowers flowers = new Flowers();
 
         return   new Flowers(name, lengthStem, age, priseFlowers);
     }
-
-
 
     private void createBouquet() {
         Scanner s = new Scanner(System.in);
@@ -149,7 +146,6 @@ Flowers flowers = new Flowers();
 
         }
     }
-
 
     public void stop() {
         scanner.close();
