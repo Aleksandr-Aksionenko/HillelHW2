@@ -1,6 +1,6 @@
 package taxPark;
 
-import model.Cars;
+import model.*;
 
 
 public interface TaxPark {

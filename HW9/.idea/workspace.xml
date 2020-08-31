@@ -20,29 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8b08f10-5b27-4ba2-9851-d4f050de73b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../HW/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/HW10.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/src/flowers/Accessory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/src/flowers/Bouquet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/src/flowers/Flowers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/src/flowersWorker/FlowersShop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/src/inputOutput/ConsoleFlowers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW10/src/utils/ArrayUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW/HW9.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW/src/.idea/src.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW/src/HW9.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW7/src/Cars.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW7/src/Cars.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/src/model/Cars.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/src/model/PassengerCar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/src/model/TruckCar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/src/run/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/run/Run.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Car/src/taxPark/CarProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/taxPark/CarProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car/src/taxPark/TaxPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car/src/taxPark/TaxPark.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HW7" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -81,7 +77,7 @@
       <recent name="D:\HillelHW2\HillelHW2\HW9\Car" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Runner">
+  <component name="RunManager" selected="Application.Run">
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="run.Run" />
       <module name="Car" />
@@ -110,8 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Runner" />
         <item itemvalue="Application.Run" />
+        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>
@@ -149,25 +145,37 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1597660597444" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1597663016863">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1598821141623">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597663016863" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1597663016862">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598821141623" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1598819429942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597663016862" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1597663016862">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598819429942" />
+    <state width="1286" height="179" key="GridCell.Tab.0.bottom" timestamp="1598823540300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597663016862" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1597663016863">
+    <state width="1286" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598823540300" />
+    <state width="1286" height="179" key="GridCell.Tab.0.center" timestamp="1598823540300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597663016863" />
-    <state x="65" y="0" key="new project wizard" timestamp="1597661943118">
+    <state width="1286" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598823540300" />
+    <state width="1286" height="179" key="GridCell.Tab.0.left" timestamp="1598823540300">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1597661943118" />
+    <state width="1286" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598823540300" />
+    <state width="1286" height="179" key="GridCell.Tab.0.right" timestamp="1598823540300">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598823540300" />
+    <state x="65" y="0" key="new project wizard" timestamp="1598823281080">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1598823281080" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1598821169208">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1598821169208" />
   </component>
 </project>

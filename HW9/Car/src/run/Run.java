@@ -10,7 +10,7 @@ public class Run {
         int min = 100;
         int max = 500;
         TruckCar[] truckCar = {
-                new TruckCar("Nyva", 132, 2.3, 334, "yellow", 123000),
+                new TruckCar("Nyva", 132, 2.3, 334, "yellow", 123000,134),
                 new TruckCar("FORD", 1382, 2.3, 334, "yellow", 123000)};
         PassengerCar[] passengerCars = {
                 new PassengerCar("Audi", 123, 2.5, 211, "Red", 40000),

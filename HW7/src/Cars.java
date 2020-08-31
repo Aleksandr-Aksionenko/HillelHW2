@@ -1,5 +1,4 @@
 public class Cars {
-
     private String brand;
     private int speed;
     private double fuelConsumption;

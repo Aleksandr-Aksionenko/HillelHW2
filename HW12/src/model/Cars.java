@@ -1,21 +1,20 @@
 package model;
 
-public abstract class Cars {
+public class Cars {
 
     private String brand;
     private int speed;
     private double fuelConsumption;
     private int engineCapacity;
-    private String colour;
     private int price;
+    private String model;
 
-    public Cars(String brand, int speed, double fuelConsumption, int engineCapacity, String colour, int price) {
-
+    public Cars(String model, String brand, int speed, double fuelConsumption, int engineCapacity, int price) {
+        this.model = model;
         this.brand = brand;
         this.speed = speed;
         this.fuelConsumption = fuelConsumption;
         this.engineCapacity = engineCapacity;
-        this.colour = colour;
         this.price = price;
     }
 
@@ -35,9 +34,6 @@ public abstract class Cars {
         return engineCapacity;
     }
 
-    public String getColour() {
-        return colour;
-    }
 
     public int getPrice(int i) {
         return price;

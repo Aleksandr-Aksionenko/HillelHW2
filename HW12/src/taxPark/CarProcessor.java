@@ -1,29 +1,26 @@
 package taxPark;
 
-import model.*;
+import model.Cars;
 
-
-public abstract class CarProcessor implements TaxPark {
+public  class CarProcessor  {
 
     private Cars[] cars;
 
-    protected CarProcessor(Cars... count) {
+    public CarProcessor(Cars... count) {
         cars = count;
     }
 
-    public Cars[] speed(int min, int max) {
+    public String speed(int min, int max) {
         Cars[] checkCars = new Cars[]{};
         for (Cars car : cars) {
             if (min < car.getSpeed() && car.getSpeed() < max) {
                 checkCars = checkCars(checkCars, car);
             }
-
         }
-        return checkCars;
-    }
 
-    @Override
-    public Cars[] sortCars(Cars[] cars) {
+        return null;
+    }
+    public Cars[] sortCars() {
 
         Cars[] sortedCars = cars;
         for (int i = 0; i < sortedCars.length; i++) {
@@ -52,14 +49,15 @@ public abstract class CarProcessor implements TaxPark {
         return check;
     }
 
-    @Override
-    public double sumPrice(Cars[] cars) {
+
+    public double sumPrice() {
         int sumPrise = 0;
         for (Cars car : cars) {
             sumPrise = car.getPrice() + sumPrise;
         }
         return sumPrise;
     }
+
 
     public String toString(Cars[] speedCars) {
 
@@ -68,6 +66,8 @@ public abstract class CarProcessor implements TaxPark {
             report += car.toString() + "\n";
         }
         return report;
+
     }
+
 }
 
