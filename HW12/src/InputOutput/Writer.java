@@ -7,15 +7,13 @@ import java.io.IOException;
 
 public class Writer {
 
-    public static void writeFile(File file, String text) {
-        try (FileWriter writer = new FileWriter((file))) {
-            writer.write(text);
-            writer.flush();
+    public static void writeFile(File files, String text) throws IOException {
+      try {  FileWriter writer = new FileWriter(files);
+        writer.write(text);
+        writer.flush();
 
-        } catch (IOException ioe) {
-            System.out.println("IOException");
-        }
+        }catch (NullPointerException e){
 
+      }
     }
-
 }

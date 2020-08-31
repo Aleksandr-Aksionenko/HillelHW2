@@ -17,10 +17,9 @@ public  class CarProcessor  {
                 checkCars = checkCars(checkCars, car);
             }
         }
-
         return null;
     }
-    public Cars[] sortCars() {
+    public String sortCars() {
 
         Cars[] sortedCars = cars;
         for (int i = 0; i < sortedCars.length; i++) {
@@ -37,7 +36,7 @@ public  class CarProcessor  {
             sortedCars[i] = minConsumptionCar;
             sortedCars[minId] = temp;
         }
-        return sortedCars;
+        return String.valueOf(sortedCars);
     }
 
     private Cars[] checkCars(Cars[] checkCars, Cars car) {
