@@ -29,13 +29,11 @@ public class Run {
     private void intervalDivision() {
         int period = (toIndex - fromIndex) / threadsCount;
         finderThreads = new Thread[threadsCount];
-        int min = fromIndex;
+        int minI = fromIndex;
         for (int i = 0; i < threadsCount; i++) {
-            for (int j = min; j <= period; j++) {
-                finderThreads[i] = new Thread(new ThreadPrimes(min, i, storage));
-            }
-            min = min + period;
-            period = period + min;
+            finderThreads[i] = new Thread(new ThreadPrimes(minI, period, storage));
+            minI = period + 1;
+            period = period + minI;
         }
     }
 

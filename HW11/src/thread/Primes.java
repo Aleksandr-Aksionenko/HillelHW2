@@ -1,7 +1,6 @@
 package thread;
 
 import arrayUtils.Utils;
-
 import java.util.Arrays;
 
 public class Primes {
@@ -18,7 +17,9 @@ public class Primes {
         System.arraycopy(array, 0, primes, primes.length - amountOfElements, amountOfElements);
         for (int number : array) {
             primes[previousArrayLength++] = number;
-    }}
+        }
+    }
+
     public int[] getPrimes() {
         return primes;
     }

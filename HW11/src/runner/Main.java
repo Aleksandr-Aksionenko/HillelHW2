@@ -1,14 +1,20 @@
 package runner;
 
 import thread.Primes;
+import java.util.Scanner;
+
 
 public class Main {
+
     public static void main(String[] args) throws InterruptedException {
 
-
-        int from = 5;
-        int to = 100;
-        int threadsCount = 2;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("lower bound");
+        int from = scanner.nextInt();
+        System.out.println("upper boundary entry");
+        int to = scanner.nextInt();
+        System.out.println("input streams");
+        int threadsCount = scanner.nextInt();
 
         Primes storage = new Primes();
         Run run = new Run(from, to, threadsCount, storage);
@@ -16,10 +22,11 @@ public class Main {
         run.startThreads();
 
         for (int number : storage.getPrimes()) {
+
             System.out.println(number);
         }
 
 
-        }
     }
+}
 

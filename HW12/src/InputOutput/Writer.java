@@ -11,7 +11,6 @@ public class Writer {
       try {  FileWriter writer = new FileWriter(files);
         writer.write(text);
         writer.flush();
-
         }catch (NullPointerException e){
 
       }
