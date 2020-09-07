@@ -6,10 +6,13 @@ public class List<T> {
     private int size;
     Node node = new Node<>();
 
+    public List() {
+
+    }
 
     public List(T[] array) {
-        for (T temp : array) {
-            addLast(temp);
+        for (T tmp : array) {
+            addLast(tmp);
         }
     }
 
@@ -33,14 +36,15 @@ public class List<T> {
             last.setNext(node);
             last = node;
         }
+        size++;
     }
 
     public void addByIndex(int index, T element) {
         if (index == 0) {
             addFirst(element);
         } else {
-            Node<T> nodeBefore = node(index - 1);
-            Node<T> nodeAfter = node(index);
+            Node<T> nodeBefore = getNode(index - 1);
+            Node<T> nodeAfter = getNode(index);
             Node<T> newNode = new Node<T>(element, nodeAfter);
             nodeBefore.setNext(newNode);
             size++;
@@ -58,7 +62,7 @@ public class List<T> {
 
     public void delLast() {
 
-        if (isEmptyLast())
+        if (last == null)
             return;
         else {
             last = node.getNext();
@@ -66,30 +70,44 @@ public class List<T> {
         }
 
     }
-
-    public void interchange(int indexFist, int indexSecond) {
-        Node fist = node(indexFist);
-        Node second = node(indexSecond);
-        Node tmp = fist.getNext();
-        second.setNext(fist);
-        tmp.setNext(second);
-    }
-
     public void delByIndex(int index) {
         if (index < 0 || index >= size)
             return;
         if (index == 0)
             delFirst();
         else {
-            Node<T> before = node(index - 1);
-            Node<T> after = node(index + 1);
+            Node<T> before = getNode(index - 1);
+            Node<T> after = getNode(index + 1);
             before.setNext(after);
             size--;
         }
     }
 
 
-    private Node<T> node(int index) {
+    public void interchange(int indexFirst, int indexSecond) {
+        if (indexFirst == 0) {
+            Node first = getNode(indexFirst);
+            Node second = getNode(indexSecond - 1);
+            Node tmp = first.getNext();
+            second.setNext(first);
+            tmp.setNext(second);
+        } else if (indexSecond == 0) {
+            Node first = getNode(indexSecond);
+            Node second = getNode(indexFirst - 1);
+            Node tmp = first.getNext();
+            second.setNext(first);
+            tmp.setNext(second);
+        } else {
+            Node first = getNode(indexFirst-1);
+            Node second = getNode(indexSecond - 1);
+            Node tmp = first.getNext();
+            second.setNext(first);
+            tmp.setNext(second);
+        }
+    }
+
+
+    private Node<T> getNode(int index) {
         if (index < 0 || index > size())
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + size);
         Node<T> result = node;
@@ -113,21 +131,16 @@ public class List<T> {
         }
     }
 
-    public boolean isEmptyLast() {
-        return last == null;
-    }
 
     public boolean isEmptyHead() {
         return head == null;
     }
-
     @Override
     public String toString() {
-        return "List{" +
-                "head=" + head +
-                ", last=" + last +
-                ", size=" + size +
-                ", node=" + node +
-                '}';
+        String out = "";
+        for(int i = 0; i < size; i++) {
+            out = out + getNode(i).getData();
+        }
+        return out;
     }
 }
