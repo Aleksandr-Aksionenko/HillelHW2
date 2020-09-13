@@ -1,12 +1,8 @@
 package taxPark;
 
 import model.Cars;
-import util.CarComparator;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
-public class CarProcessor {
+public  class CarProcessor  {
 
     private Cars[] cars;
 
@@ -23,15 +19,23 @@ public class CarProcessor {
         }
         return null;
     }
-
-    public void comparatorSort() {
-        Arrays.sort(cars, new CarComparator());
-    }
-    public void lambdaSort(){
-        Arrays.sort(cars,(car1,car2)->Double.compare(car1.getFuelConsumption(),car2.getFuelConsumption()));
-    }
-    public void methodReference(){
-        Arrays.sort(cars, Comparator.comparingDouble(Cars::getFuelConsumption));
+    public String sortCars() {
+        Cars[] sortedCars = cars;
+        for (int i = 0; i < sortedCars.length; i++) {
+            double minConsumption = sortedCars[i].getFuelConsumption();
+            Cars minConsumptionCar = sortedCars[i];
+            int minId = i;
+            for (int j = i + 1; j < sortedCars.length; j++) {
+                if (sortedCars[j].getFuelConsumption() < minConsumption) {
+                    minConsumptionCar = sortedCars[j];
+                    minId = j;
+                }
+            }
+            Cars temp = sortedCars[i];
+            sortedCars[i] = minConsumptionCar;
+            sortedCars[minId] = temp;
+        }
+        return String.valueOf(sortedCars);
     }
 
     private Cars[] checkCars(Cars[] checkCars, Cars car) {

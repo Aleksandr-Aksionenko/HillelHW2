@@ -9,7 +9,9 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 public class InputOutput {
+
     public static String read() throws IOException {
         String content = null;
         try (FileInputStream fis = new FileInputStream(new File("Cars.txt"))) {
@@ -50,6 +52,7 @@ public class InputOutput {
         }
         return newCars;
     }
+
 }
 
 

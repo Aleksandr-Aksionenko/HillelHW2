@@ -1,10 +1,7 @@
 package run;
 
-import InputOutput.Reader;
-import InputOutput.Writer;
+import InputOutput.InputOutput;
 import taxPark.CarProcessor;
-import taxPark.CheckingCars;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -13,9 +10,13 @@ public class Run {
     public static void main(String[] args) throws IOException {
         int min = 20;
         int max = 400;
-        String cars = Reader.read();
-        CheckingCars newCars = new CheckingCars();
+        String cars = InputOutput.read();
+        InputOutput newCars = new InputOutput();
         CarProcessor carProcessor = new CarProcessor(newCars.CreateCars(cars));
-      Writer.writeFile(new File("CarsWrite.txt"), carProcessor.sortCars());
+        carProcessor.comparatorSort(cars);
+        carProcessor.lambdaSort();
+        carProcessor.methodReference();
+        InputOutput.writeFile(new File("CarsWrite.txt"),cars);
     }
+
 }
