@@ -1,13 +1,35 @@
-package taxPark;
+package InputOutput;
 
 import model.Cars;
 import model.PassengerCar;
 import model.TruckCar;
 
-import javax.sound.midi.Track;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 
-public class CheckingCars {
+public class InputOutput {
+    public static String read() throws IOException {
+        String content = null;
+        try (FileInputStream fis = new FileInputStream(new File("Cars.txt"))) {
+            byte[] buffer = new byte[fis.available()];
+            fis.read(buffer, 0, buffer.length);
 
+            content = new String(buffer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content;
+    }
+
+    public static void writeFile(File files, String text) throws IOException {
+        try {  FileWriter writer = new FileWriter(files);
+            writer.write(text);
+            writer.flush();
+        }catch (NullPointerException e){
+        }
+    }
     public Cars[] CreateCars(String car) {
         Cars[] newCars = new Cars[]{};
         String[] lines = car.split(";\r\n");
@@ -29,4 +51,5 @@ public class CheckingCars {
         return newCars;
     }
 }
+
 

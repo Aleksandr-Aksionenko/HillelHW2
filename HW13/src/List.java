@@ -1,4 +1,4 @@
-
+import java.util.LinkedList;
 
 public class List<T> {
     private Node<T> head;
