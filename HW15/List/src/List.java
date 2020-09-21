@@ -1,6 +1,6 @@
-import java.util.LinkedList;
+import java.util.Iterator;
 
-public class List<T> {
+public class List<T> implements Iterable<T> {
     private Node<T> head;
     private Node<T> last;
     private int size;
@@ -26,7 +26,6 @@ public class List<T> {
             node.setNext(head);
             head = node;
         }
-        size++;
     }
 
     public void addLast(T data) {
@@ -36,7 +35,6 @@ public class List<T> {
             last.setNext(node);
             last = node;
         }
-        size++;
     }
 
     public void addByIndex(int index, T element) {
@@ -47,7 +45,7 @@ public class List<T> {
             Node<T> nodeAfter = getNode(index);
             Node<T> newNode = new Node<T>(element, nodeAfter);
             nodeBefore.setNext(newNode);
-            size++;
+
         }
     }
 
@@ -56,7 +54,7 @@ public class List<T> {
             return;
         else {
             head = head.getNext();
-            size--;
+
         }
     }
 
@@ -66,10 +64,10 @@ public class List<T> {
             return;
         else {
             last = node.getNext();
-            size--;
         }
 
     }
+
     public void delByIndex(int index) {
         if (index < 0 || index >= size)
             return;
@@ -79,7 +77,6 @@ public class List<T> {
             Node<T> before = getNode(index - 1);
             Node<T> after = getNode(index + 1);
             before.setNext(after);
-            size--;
         }
     }
 
@@ -98,7 +95,7 @@ public class List<T> {
             second.setNext(first);
             tmp.setNext(second);
         } else {
-            Node first = getNode(indexFirst-1);
+            Node first = getNode(indexFirst - 1);
             Node second = getNode(indexSecond - 1);
             Node tmp = first.getNext();
             second.setNext(first);
@@ -131,16 +128,39 @@ public class List<T> {
         }
     }
 
-
     public boolean isEmptyHead() {
         return head == null;
     }
+
     @Override
     public String toString() {
         String out = "";
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             out = out + getNode(i).getData();
         }
         return out;
+    }
+
+    public Iterator<T> iterator() {
+        return new ListIterator<T>();
+    }
+
+    private class ListIterator<T> implements Iterator<T> {
+        private Node<T> next;
+        public ListIterator() {
+            this.next = node;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return next != null;
+        }
+
+        @Override
+        public T next() {
+            T value = next.getData();
+            next = next.getNext();
+            return value;
+        }
     }
 }

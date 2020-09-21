@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
-
 public class Run {
     public static void main(String[] args) {
         Integer[] data = {1, 2, 41, 13, 3, 22, 14};
