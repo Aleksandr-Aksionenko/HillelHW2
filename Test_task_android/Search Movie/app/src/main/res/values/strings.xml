@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Movie Search</string>
+    <string name="nav_home">Main</string>
+    <string name="nav_favorites">Favorite</string>
+    <string name="search">search</string>
+    <string name="something_wrong">Something wrong!</string>
+    <string name="nameFilm">nameFilm</string>
+    <string name="movie_search">Movie Search</string>
+    <string name="description">description</string>
+</resources>
